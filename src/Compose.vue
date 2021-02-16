@@ -58,8 +58,8 @@
             type: 'outgoing',
             date: moment(),
             from: {
-              name: 'Bo Andersen',
-              email: 'info@codingexplained.com'
+              name: 'Ann Kriviruchko',
+              email: 'samplename@gmail.com'
             },
             attachments: []
           }

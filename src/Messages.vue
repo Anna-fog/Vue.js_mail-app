@@ -3,7 +3,7 @@
     <table v-if="messages.length > 0" class="table table-inbox table-hover">
       <tbody>
       <tr v-for="message in messages" @click="openMessage(message)" :class="{ unread: typeof message.isRead !== 'undefined' && !message.isRead}">
-        <td><input type="checkbox"></td>
+        <td><input :checked="message.isChecked" @click.stop="checkMessage(message)" type="checkbox"></td>
         <td>
           <a href="#" v-if="typeof message.isImportant !== 'undefined'" @click.prevent.stop="message.isImportant = !message.isImportant">
             <i :class="['fa', 'fa-star', { important: message.isImportant }]"></i>
@@ -30,7 +30,7 @@
     props: {
       messages: {
         type: Array,
-        required: true
+        required: true,
       }
     },
     methods:  {
@@ -42,6 +42,10 @@
             message: message
           }
         });
+      },
+      checkMessage(message) {
+        // console.log(message.isChecked);
+        message.isChecked = !message.isChecked;
       }
     }
   }

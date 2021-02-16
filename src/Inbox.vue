@@ -6,6 +6,11 @@
           <i class="fa fa-refresh"></i>&nbsp; Refresh
         </a>
       </div>
+      <div class="btn-group">
+        <a href="#" class="btn" @click="deleteChecked">
+          <i class="fa fa-trash-o"></i>&nbsp; Delete
+        </a>
+      </div>
     </div>
 
     <app-messages :messages="incomingMessages"></app-messages>
@@ -26,6 +31,17 @@
     methods: {
       refresh() {
         eventBus.$emit('refreshMessages');
+      },
+      deleteChecked() {
+        this.data.messages.forEach(m => {
+          if (m.isChecked) {
+            m.isDeleted = true;
+            m.isChecked = false;
+          }
+        });
+
+        this.data.messages = this.data.messages.filter(m => !m.isChecked);
+
       }
     },
     computed: {

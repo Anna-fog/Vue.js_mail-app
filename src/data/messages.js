@@ -12,6 +12,8 @@ export default [
         isImportant: false,
         isDeleted: false,
         isRead: false,
+        isChecked: false,
+
         type: 'incoming',
         date: moment().subtract(10, 'minutes'),
         from: {
@@ -33,6 +35,7 @@ export default [
         isImportant: false,
         isDeleted: false,
         isRead: false,
+        isChecked: false,
         type: 'incoming',
         date: moment().subtract(30, 'minutes'),
         from: {
@@ -51,6 +54,7 @@ export default [
         isImportant: true,
         isDeleted: false,
         isRead: true,
+        isChecked: false,
         type: 'incoming',
         date: moment().subtract(75, 'minutes'),
         from: {
@@ -70,6 +74,7 @@ export default [
         isImportant: true,
         isDeleted: false,
         isRead: true,
+        isChecked: false,
         type: 'incoming',
         date: moment().subtract(2, 'days'),
         from: {
@@ -90,6 +95,7 @@ export default [
             <p>Let me know if you get this, because who really uses e-mail these days?</p>
         `,
         isDeleted: false,
+        isChecked: false,
         type: 'outgoing',
         date: moment().subtract(7, 'days'),
         from: {
@@ -108,6 +114,7 @@ export default [
         isImportant: false,
         isDeleted: false,
         isRead: true,
+        isChecked: false,
         type: 'incoming',
         date: moment().subtract(2, 'weeks'),
         from: {
@@ -133,6 +140,7 @@ export default [
         isImportant: true,
         isDeleted: false,
         isRead: true,
+        isChecked: false,
         type: 'incoming',
         date: moment().subtract(2, 'months'),
         from: {
@@ -152,6 +160,7 @@ export default [
         isImportant: false,
         isDeleted: true,
         isRead: false,
+        isChecked: false,
         type: 'incoming',
         date: moment().subtract(3, 'months'),
         from: {
@@ -170,6 +179,7 @@ export default [
             <p>Ann Krivoruchko</p>
         `,
         isDeleted: false,
+        isChecked: false,
         type: 'outgoing',
         date: moment().subtract(100, 'days'),
         from: {
@@ -187,6 +197,7 @@ export default [
             <p>Let me know!</p>
         `,
         isDeleted: false,
+        isChecked: false,
         type: 'outgoing',
         date: moment().subtract(4, 'months'),
         from: {
@@ -205,6 +216,7 @@ export default [
         isImportant: false,
         isDeleted: true,
         isRead: true,
+        isChecked: false,
         type: 'incoming',
         date: moment().subtract(5, 'months'),
         from: {
@@ -229,6 +241,7 @@ export default [
             <p>An Angry Customer</p>
         `,
         isDeleted: false,
+        isChecked: false,
         type: 'outgoing',
         date: moment().subtract(6, 'months'),
         from: {
@@ -249,6 +262,7 @@ export default [
         `,
         isImportant: false,
         isDeleted: false,
+        isChecked: false,
         isRead: false,
         type: 'incoming',
         date: moment().subtract(7, 'months'),
@@ -273,6 +287,7 @@ export default [
         isImportant: false,
         isDeleted: false,
         isRead: true,
+        isChecked: false,
         type: 'incoming',
         date: moment().subtract(8, 'months'),
         from: {
@@ -299,6 +314,7 @@ export default [
         isImportant: false,
         isDeleted: false,
         isRead: true,
+        isChecked: false,
         type: 'incoming',
         date: moment().subtract(9, 'months'),
         from: {
@@ -319,6 +335,7 @@ export default [
         isImportant: false,
         isDeleted: false,
         isRead: true,
+        isChecked: false,
         type: 'incoming',
         date: moment().subtract(10, 'months'),
         from: {
