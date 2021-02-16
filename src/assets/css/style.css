@@ -1,3 +1,10 @@
+body {
+  background-image: url("../images/bg-leaves.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
 .mail-box {
     border-collapse: collapse;
     border-spacing: 0;
@@ -73,8 +80,20 @@ a.mail-dropdown {
     padding: 20px 0 20px 20px;
 }
 
+.btn-delete {
+  background-color: lightcoral;
+  border: 1px solid lightcoral;
+  color: #ffffff;
+}
+
+.btn-delete:hover {
+  color: #ffffff;
+  border-color: indianred;
+  background-color: indianred;
+}
+
 .btn-compose {
-    background: none repeat scroll 0 0 #ff6c60;
+    background: none repeat scroll 0 0 darkcyan;
     color: #fff;
     padding: 12px 0;
     text-align: center;
@@ -82,7 +101,7 @@ a.mail-dropdown {
 }
 
 .btn-compose:hover {
-    background: none repeat scroll 0 0 #f5675c;
+    background: none repeat scroll 0 0 cadetblue;
     color: #fff;
 }
 
@@ -204,8 +223,6 @@ ul.inbox-pagination li {
 }
 
 .mail-option {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 10px;
     width: 100%;
 }
@@ -240,6 +257,16 @@ ul.inbox-pagination li {
 
 .btn-send:hover {
     background: none repeat scroll 0 0 #009da7;
+}
+
+/*.btn:focus {*/
+/*  outline: none;*/
+/*  box-shadow: none;*/
+/*}*/
+
+.btn:active {
+  outline: none;
+  box-shadow: none;
 }
 
 .modal-header h4.modal-title {
@@ -385,6 +412,18 @@ body .modal.fade .modal-dialog{
 
 .attachments {
     margin-top: 30px;
+}
+
+.bg-inbox {
+  background-color: cadetblue;
+}
+
+.bg-grey {
+  background-color: darkgray;
+}
+
+.bg-salmon {
+  background-color: darksalmon;
 }
 
 

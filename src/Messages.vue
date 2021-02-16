@@ -44,7 +44,6 @@
         });
       },
       checkMessage(message) {
-        // console.log(message.isChecked);
         message.isChecked = !message.isChecked;
       }
     }
