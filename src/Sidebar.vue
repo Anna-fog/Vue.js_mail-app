@@ -16,25 +16,25 @@
     <ul class="inbox-nav">
       <li :class="{ active: activeView === 'app-inbox' }">
         <a href="#" @click.prevent="navigate('app-inbox', 'Inbox')">
-          <i class="fa fa-inbox"></i>Inbox <span class="badge bg-inbox float-end mt-2">{{ unreadMessages.length }}</span>
+          <i class="fa fa-inbox"></i>Inbox <span class="badge bg-inbox float-end">{{ unreadMessages.length }}</span>
         </a>
       </li>
 
       <li :class="{ active: activeView === 'app-sent' }">
         <a href="#" @click.prevent="navigate('app-sent', 'Sent')">
-          <i class="fa fa-envelope-o"></i>Sent <span class="badge bg-grey float-end mt-2">{{ sentMessages.length }}</span>
+          <i class="fa fa-envelope-o"></i>Sent <span class="badge bg-grey float-end">{{ sentMessages.length }}</span>
         </a>
       </li>
 
       <li :class="{ active: activeView === 'app-important' }">
         <a href="#" @click.prevent="navigate('app-important', 'Important')">
-          <i class="fa fa-bookmark-o"></i>Important <span class="badge bg-salmon float-end mt-2">{{ importantMessages.length }}</span>
+          <i class="fa fa-bookmark-o"></i>Important <span class="badge bg-salmon float-end">{{ importantMessages.length }}</span>
         </a>
       </li>
 
       <li :class="{ active: activeView === 'app-trash' }">
         <a href="#" @click.prevent="navigate('app-trash', 'Trash')">
-          <i class="fa fa-trash-o"></i>Trash <span class="badge bg-grey float-end mt-2">{{ trashedMessages.length }}</span>
+          <i class="fa fa-trash-o"></i>Trash <span class="badge bg-grey float-end">{{ trashedMessages.length }}</span>
         </a>
       </li>
     </ul>

@@ -1,8 +1,22 @@
+* html .fileinput-button {
+  line-height: 24px;
+  margin: 1px -3px 0 0;
+}
+
+* + html .fileinput-button {
+  margin: 1px 0 0;
+  padding: 2px 15px;
+}
+
 body {
   background-image: url("../images/bg-leaves.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
 }
 
 .mail-box {
@@ -77,7 +91,7 @@ a.mail-dropdown {
 }
 
 .inbox-body {
-    padding: 20px 0 20px 20px;
+    padding: 20px;
 }
 
 .btn-delete {
@@ -263,10 +277,10 @@ ul.inbox-pagination li {
     background: none repeat scroll 0 0 #009da7;
 }
 
-/*.btn:focus {*/
-/*  outline: none;*/
-/*  box-shadow: none;*/
-/*}*/
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
 
 .btn:active {
   outline: none;
@@ -276,10 +290,6 @@ ul.inbox-pagination li {
 .modal-header h4.modal-title {
     font-family: "Open Sans",sans-serif;
     font-weight: 300;
-}
-
-body .modal.fade .modal-dialog{
-  transform: translate(50px) !important;
 }
 
 .modal-body label {
@@ -380,15 +390,64 @@ body .modal.fade .modal-dialog{
     display: block;
 }
 
-* html .fileinput-button {
-    line-height: 24px;
-    margin: 1px -3px 0 0;
+
+.message {
+  font-size: 18px;
 }
 
-* + html .fileinput-button {
-    margin: 1px 0 0;
-    padding: 2px 15px;
+.attachments {
+  margin-top: 30px;
 }
+
+.bg-inbox {
+  background-color: cadetblue;
+}
+
+.bg-grey {
+  background-color: darkgray;
+}
+
+.bg-salmon {
+  background-color: darksalmon;
+}
+
+.badge {
+  margin-top: 12px;
+}
+
+.inbox-nav {
+  display: flex;
+}
+
+
+
+/*------------adaptive-----------*/
+
+
+@media (max-width: 990px) {
+  .mail-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mail-box .sm-side {
+    width: 100%;
+  }
+
+  .mail-box .lg-side {
+    width: 100%;
+  }
+
+  .inbox-head {
+    display: none;
+  }
+
+  ul.inbox-nav {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
 
 @media (max-width: 767px) {
     .files .btn span {
@@ -408,26 +467,32 @@ body .modal.fade .modal-dialog{
     .files .delete {
         width: 60px;
     }
+
+  ul.inbox-nav {
+    flex-wrap: wrap;
+  }
 }
 
-.message {
-    font-size: 18px;
+
+@media (max-width: 575px) {
+  .message-item {
+    line-height: 20px;
+  }
+
+  .inbox-body {
+    padding: 20px 5px;
+    overflow: auto !important;
+  }
+
+  .table-inbox tr td {
+    padding: 10px 5px !important;
+  }
+
 }
 
-.attachments {
-    margin-top: 30px;
-}
 
-.bg-inbox {
-  background-color: cadetblue;
-}
 
-.bg-grey {
-  background-color: darkgray;
-}
 
-.bg-salmon {
-  background-color: darksalmon;
-}
+
 
 
