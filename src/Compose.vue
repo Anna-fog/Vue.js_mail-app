@@ -50,20 +50,24 @@
     },
     methods: {
       sendMessage() {
-        eventBus.$emit('sentMessage', {
-          message: {
-            subject: this.message.subject,
-            content: this.message.content,
-            isDeleted: false,
-            type: 'outgoing',
-            date: moment(),
-            from: {
-              name: 'Ann Kriviruchko',
-              email: 'samplename@gmail.com'
-            },
-            attachments: []
-          }
-        });
+        if (this.message.subject && this.message.content) {
+          eventBus.$emit('sentMessage', {
+            message: {
+              subject: this.message.subject,
+              content: this.message.content,
+              isDeleted: false,
+              type: 'outgoing',
+              date: moment(),
+              from: {
+                name: 'Ann Kriviruchko',
+                email: 'samplename@gmail.com'
+              },
+              attachments: []
+            }
+          });
+        }
+        this.message.subject = '';
+        this.message.content = '';
       }
     }
   }
